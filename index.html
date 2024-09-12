@@ -1,71 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MUsaveer Shaik</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
-</head>
-<body>
-
-
-    <div class="top-container">
-        <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-        <h1>I'm Musaveer</h1>       
-        <h2>a programmer.</h2>
-        <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-        <img class="mountain" src="images/mountain.png" alt="mountain-img">
-    </div>
-
-    <!--<div class="middle-container">
-    </div>
-    <div class="bottom-container">
-
-    </div> !-->
-    <div class="middle-container">
-        <div class="profile">
-          <img class="userphoto" src="images/user.png" alt="">
-          <h2 class="head">Hello.</h2>
-          <p class="matt"> Hi Iam musaveer, a wed developer</p>
-          <hr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <!-- <div class="logo">Musaveer Shaik</div> -->
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Musaveer</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="skills">
-          <h2 class="head" >My Skills.</h2>
-          <div class="skill-row">
-            <img class="compu1" src="https://media0.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e4779in7lcq273bh2em8kczick4gwt1h6x9zbvci2g2&rid=giphy.gif&ct=s" alt="">
-            
-            <h3>Design & Development</h3>
-            <p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.</p>
-            
-
-            
-          </div>
-          <hr>
-          <div class="skill-row">
-            <img class="compu2" src="images/coding.gif">
-            <h3>Lorem Ipsum Dolor</h3>
-            <p class="skill-des">Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.</p>
-          </div>
-        </div>
-        <hr>
-        <div class="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>Lorem ipsum dolor sit amet, non elit.</h3>
-          <p style="margin: 40px auto 60px;">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
-          <a class="btn" href="mailto:abdulmusawwirhshaik@gmail.com">CONTACT ME</a>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
-      
-      
-      <div class="bottom-container">
-        <a class="footer-link" href="https://github.com/Musaveershaik">github</a>
-        <a class="footer-link" href="https://twitter.com/MOHAMMAD_MUSA28">Twitter</a>
-        <a class="footer-link" href="https://www.instagram.com/mohammad_musa_007/">Instagram</a>
-        <p class="copyright">© 2023 Shaik Musaveer.</p>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/MyProfilePic.jpg" alt="Shaik Musaveer profile picture" />
       </div>
-      
-</body>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Shaik Musaveer</h1>
+        <p class="section__text__p2"><span class="separator"></span>DevOps Engineer</p>
+
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('assets/MusaveerDevOps.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+          
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="openLink('https://www.linkedin.com/in/musaveer43/', true)"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="openLink('https://github.com/Musaveershaik', true)"
+          />
+        </div>
+        
+        <script>
+          function openLink(url, newTab) {
+              if (newTab) {
+                  window.open(url, '_blank');
+              } else {
+                  location.href = url;
+              }
+          }
+      </script>
+        
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <!-- <div class="section__pic-containerab">
+          <img
+            src="assets/3611db8b141929a91844ad4b4b69e4c6.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div> -->
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Expertise</h3>
+              <p>CI/CD Pipelines<br />Infrastructure as Code (IaC)<br />Cloud Services (AWS)</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor's Degree in Computer Science & Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello! I'm a DevOps engineer with a strong background in cloud infrastructure, CI/CD pipelines, and automation. I hold a Bachelor's Degree in Computer Science and have experience in
+              <u>Continuous Integration, Continuous Deployment, Infrastructure as Code, and Cloud Architecture</u>. My goal is to build scalable and reliable systems that support seamless software delivery and robust infrastructure.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      <a href="#experience">
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+      </a>
+    </section>
+    <section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container">
+        <h2 class="experience-sub-title">DevOps Practices</h2>
+        <div class="article-container">
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>CI/CD Pipelines</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Infrastructure as Code (IaC)</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Monitoring & Logging</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Version Control (Git)</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">DevOps Tools & Platforms</h2>
+        <div class="article-container">
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>AWS</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Docker</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Kubernetes</h3>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3>Jenkins</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#projects">
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+      </a>
+</section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/p1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">AWS Full-Stack Deployment</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">CI/CD Pipeline Automation</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#contact">
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+      </a>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:musaveershaikh43@gmail.com">musaveershaikh43@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/musaveer43">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &copy; 2024 Musaveer. All Rights Reserved.</p>
+      </footer>
+  </body>
 </html>
